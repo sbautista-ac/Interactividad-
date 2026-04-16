@@ -1,6 +1,34 @@
+body{
+    width: auto;
+    height: auto;
+   font-size: large;
+    padding: 10px;
+    margin: 10px;   
+    transition: all 0.3s ease-in-out;
+
+}   
 .btn{
     background-color: #213eb2;
     border: none;
     color: white;
-   
+width: 33.33333VW;
+height: 33.33333VW;
+font-size: 1.5em;
+    margin: 0;
+    padding: 0;   
 }
+menu{
+
+    padding: 10px;
+    margin: 10px;
+    width: 100%;    
+    display: flex;
+}
+
+button:hover {
+    background-color: #1a2a8c;  
+    opacity: 2;
+    color: tomato;
+    cursor: pointer;
+
+}   
