@@ -1,0 +1,44 @@
+body {
+  background: #1041e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "tiffin-latin-variable", sans-serif;
+}
+
+.crisis {
+    color: white;
+  font-size: 9rem;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.distort-hover {
+  display: inline-block;
+  transition: filter 0.3s;
+}
+
+.distort-hover:hover {
+  filter: blur(2px) contrast(200%) brightness(120%) saturate(150%);
+}
+/* capas para efecto fantasma */
+.crisis::before,
+.crisis::after {
+  content: "crisis";
+  position: absolute;
+  left: 10;
+  top: 40;
+  opacity: 20;
+}
+
+.crisis::before {
+  filter: blur(6px);
+}
+
+.crisis::after {
+  filter: blur(20px);
+}
