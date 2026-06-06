@@ -1,7 +1,7 @@
 let x  = 0, y = 0;
-let stroke_color = '#0000'
+let stroke_color = '#f5f90d00'
 let stroke_weight = 1;
-let fill_color ='2F8F3F';
+let fill_color ='2F8F5F';
 let size = 42;
 
 function setup(){
@@ -18,9 +18,9 @@ function draw(){
 }
 
 function updateColor(){
-    fill_color = map(mouseX,0,width, 0, 255,0);
+    fill_color = map(mouseX,0,width, 20, 205,20);
     stroke_color = map(mouseX,0,width,0,255);
-    stroke_Weight = map (mouseY,0, innerHeight,1,10)
+    stroke_weight = map (mouseY,0, innerHeight,1,10)
 }
 
 function windowResized(){

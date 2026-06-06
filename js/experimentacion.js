@@ -1,13 +1,31 @@
-const letters = document.querySelectorAll(".crisis span");
 
-letters.forEach((letter, i) => {
-  const center = letters.length / 2;
-  const distance = Math.abs(i - center);
-  const intensity = distance / center;
+const letters = document.querySelectorAll('.crizis span');
+const word = document.querySelector('.crizis');
 
-  const blur = intensity * 8;
-  const move = intensity * 30;
+word.addEventListener('mousemove', () => {
 
-  letter.style.filter = `blur(${blur}px)`;
-  letter.style.transform = `translateX(${move}px) scaleX(${1 + intensity})`;
+    letters.forEach((letter, i) => {
+
+        const center = letters.length / 2;
+        const distance = Math.abs(i - center);
+        const intensity = distance / center;
+const blur = intensity * 10;
+        letter.style.filter =
+            `blur(${blur}px)`;
+
+        letter.style.transform =
+            `translateX(${intensity * 10}px)`;
+    });
+
+});
+
+word.addEventListener('mouseleave', () => {
+
+    letters.forEach(letter => {
+
+        letter.style.filter = 'blur(0px)';
+        letter.style.transform = 'translateX(0px)';
+
+    });
+
 });
